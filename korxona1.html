@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Ishchilar nazorati</title>
+  <link rel="stylesheet" href="korxona1.css">
+</head>
+<body>
+  <div class="glass-card" id="loginSection">
+    <h1>👥 Ishchilar nazorati</h1>
+    <input type="text" id="employeeName" placeholder="Ismingizni kiriting">
+    <input type="password" id="employeeCode" placeholder="Maxfiy kod">
+    <button onclick="login()">🚀 Kirish</button>
+  </div>
+
+  <div class="glass-card hidden" id="adminPanel">
+    <h2>🛠️ Admin panel</h2>
+
+    <!-- Umumiy statistika -->
+    <div class="stats">
+      <h3>📊 Umumiy statistika</h3>
+      <p>👥 Hodimlar soni: <span id="totalWorkers"></span></p>
+      <p>✅ Ishda: <span id="presentWorkers"></span></p>
+      <p>❌ Kelmadi: <span id="absentWorkers"></span></p>
+      <p>⚡ Samaradorlik: <span id="efficiency"></span>%</p>
+    </div>
+
+    <!-- Umumiy diagramma -->
+    <h3>Umumiy ish grafigi</h3>
+    <canvas id="workerChart"></canvas>
+
+    <!-- Hodimlar bo‘limlari -->
+    <h3>Ishchilar bo‘limlari</h3>
+    <div class="workers">
+      <button onclick="showWorker('shoddilbek')">Shoddilbek</button>
+      <button onclick="showWorker('ibroxim')">Ibroxim</button>
+      <button onclick="showWorker('gulhayo')">Gulhayo</button>
+      <button onclick="showWorker('sevara')">Sevara</button>
+      <button onclick="showWorker('javlon')">Javlon</button>
+      <button onclick="showWorker('olamgir')">Olamgir</button>
+      <button onclick="showWorker('abror')">Abror</button>
+    </div>
+
+    <div id="workerSection"></div>
+    <button onclick="logout()">⬅️ Chiqish</button>
+  </div>
+
+  <div class="glass-card hidden" id="workerPanel">
+    <h2>👤 Xush kelibsiz!</h2>
+    <button onclick="checkIn()">✅ Kelish</button>
+    <button onclick="checkOut()">⏹️ Ketish</button>
+    <button onclick="logout()">⬅️ Chiqish</button>
+
+    <h3>📅 Sizning ish vaqtingiz</h3>
+    <table id="workerTimeTable">
+      <tr><th>Sana</th><th>Kelish</th><th>Ketish</th></tr>
+    </table>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="korxona1.js"></script>
+</body>
+</html>
