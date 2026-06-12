@@ -1,0 +1,5 @@
+{
+    "chat.agent.networkFilter": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.agent.sandbox.autoApproveUnsandboxedCommands": true
+}
